@@ -1,0 +1,248 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+ font-family: sans-serif;
+}
+
+a {
+ text-decoration: none;
+}
+
+li {
+ list-style: none;
+}
+.navbar_nav {
+	width: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 30px;
+	background-color: #323643;
+	color: #fff;
+	z-index: 2;
+}
+
+.nav_links a{
+	color: #fff;
+}
+
+.logo {
+	font-size: 32px;
+	padding: 0 20px;
+}
+
+.menu {
+	display: flex;
+	gap: 1em;
+	font-size: 18px;
+}
+
+.menu li {
+	padding: 5px 14px;
+}
+
+.menu a{
+	text-decoration: none;
+	color: #fff;
+}
+
+input[type=checkbox]{
+ display: none;
+}
+
+.hamburger {
+	display: none;
+	font-size: 24px;
+	user-select: none;
+}
+
+@media (max-width: 768px) {
+	.menu {
+		display: none;
+		position: absolute;
+		right: 0;
+		left: 0;
+		text-align: center;
+		padding: 16px 0;
+	}
+
+	.menu li + li {
+		margin-top: 12px;
+	}
+
+	input[type=checkbox]:checked ~ .menu{
+	 display: block;
+	 background-color: #323643;
+	 top: 65px;
+	 z-index: 20;
+	}
+
+	.hamburger {
+		display: block;
+	}
+}
+
+/*Hero Section*/
+.hero-section {
+  padding: 12rem 0;
+  background-color: #FAFAFA;
+}
+
+.animated {
+  position: relative;
+}
+
+.animated-info {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+  min-width: 260px;
+  position: relative;
+}
+
+.animated-item {
+  color: #ffc200;
+}
+
+.animated-item {
+  font-size: 38px;
+  line-height: inherit;
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  animation: BottomTotop 6s linear infinite 0s;
+}
+.animated-item:nth-child(2n+2) {
+  animation-delay: 2s;
+}
+.animated-item:nth-child(3n+3) {
+  animation-delay: 4s;
+}
+
+@media screen and (max-width: 320px) {
+	.animated-text {
+		margin-top: 0;
+	}
+
+}
+
+@media (max-width: 580px) {
+	.animated-info {
+	 min-width: 200px;
+	}
+    .animated-item {
+     font-size: 30px;
+    }
+ 
+    .custom-btn-group {
+     text-align: center;
+    }
+ 
+    .custom-btn {
+     display: block;
+     margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+	.about-image {
+     margin-top: 1em;
+  	}
+}
+
+@media screen and (max-width: 550px) {
+	.hero-section {
+  		padding: 8rem 0;
+	}
+}
+@media screen and (min-width: 550px) and (max-width: 990px) {
+	.hero-section {
+		padding: 10rem 0;
+	}
+}
+
+/* ------------------ About ------------------  */
+.hero-section-about {
+	padding: 8rem 0 5rem 0;
+}
+.about-section {
+	padding: 3.5rem 0 12rem 0;
+	background-color: #eee;
+}
+
+.section-title h2{
+	text-align: left;
+	font-size: 2.5rem;
+}
+
+.about-image-section img{
+	width: 350px;
+	height: auto;
+	margin: auto;
+	display: flex;
+}
+
+.about-text {
+	width: 100%;
+	/*text-align: justify;*/
+}
+
+@media screen and (max-width: 991px) {
+	.hero-section-about {
+		padding: 5rem 0 2rem 0;
+	}
+	.about-image-section img{
+		width: 100%;
+		text-align: center;
+		margin-top: 18px;
+		margin-bottom: 25px;
+	}
+	.about-text-section {
+		text-align: justify;
+	}
+	.section-title-up2{
+		display: none;
+	}
+	.section-title-up h2 {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 991px) and (max-width: 2000px) {
+	.section-title-up{
+		display: none;
+	}
+}
+
+/*Portopolio*/
+
+.portopolio-section {
+	padding: 6rem 0 5rem 0;
+}
+
+.section-title h2{
+	text-align: center;
+}
+
+.footer-section {
+	background-color: #323643;
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+}
+.footer-section span {
+	color: #fff;
+}
